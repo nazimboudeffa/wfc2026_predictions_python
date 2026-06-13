@@ -1,0 +1,20 @@
+# Environnement
+# Virtual environments
+venv/
+env/
+*.egg-info/
+
+# Jupiter Notebook specific files
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Données et résultats (à traiter avec précaution)
+data/
+output/
+models/
+
+# Fichiers de configuration sensibles
+.env
+.DS_Store
+.venv/

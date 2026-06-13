@@ -1,0 +1,11 @@
+# Dépendances nécessaires au projet
+
+Pour faire fonctionner le notebook de prédiction, nous aurons besoin des librairies suivantes. Vous devriez les installer dans votre environnement virtuel :
+
+```bash
+pip install pandas numpy requests python-dotenv ipykernel
+```
+
+**Note:** L'utilisation d'un fichier `.env` pour stocker la clé est recommandée par sécurité (`API_KEY="leur\_secrete"`).
+
+***

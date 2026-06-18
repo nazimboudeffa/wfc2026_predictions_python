@@ -25,5 +25,13 @@ Le score final est une variable aléatoire. Utiliser simplement les $\lambda$ n'
 *   **Sortie finale :** L'algorithme calcule les valeurs $\lambda_{Home}$ et $\lambda_{Away}$, puis utilise ces valeurs pour **simuler le score final le plus probable** (le point d'espérance) via la fonction `poisson_predict`.
 
 ---
+### ⚽ Application au Football (Exemple)
+
+Le choix de l'algorithme dépend du phénomène à modéliser :
+
+*   **Classement et Force Relative (Elo) :** Utilisé pour estimer la force intrinsèque des équipes. Chaque match est un "matchup" où le rating Elo prédit les probabilités de victoire, permettant d'ajuster le classement en fonction des surprises ou des confirmations de niveau.
+*   **Fréquence d'Événements (Poisson) :** Idéal pour modéliser la fréquence moyenne d'événements rares et indépendants sur une période donnée (ex: nombre moyen de tirs cadrés par match, nombre de corners).
+*   **Succès dans un Nombre Fixe d'Essais (Binomial) :** Utilisé lorsque le nombre total de tentatives est connu (ex: analyse des penalties où $n$ est fixe et $p$ est la probabilité de succès).
+
+---
 🛠️ **Conclusion Technique :** Le flux de données est séquentiel et dépend tous des éléments précédents. La stabilité du modèle repose sur l'ajustement continu des constantes mathématiques ($K\_FACTOR$, $900.0$) selon un jeu de données plus large (incluant les statistiques xG réelles).
-```
